@@ -102,6 +102,7 @@ function renderAlbum(album) {
 function getAlbums(){
   $.get('/api/albums',function(){})
   .done(function(albums){
+    console.log("from db albums:",albums)
     albums.forEach(function(album){
       renderAlbum(album);
     })
