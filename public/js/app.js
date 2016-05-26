@@ -38,10 +38,16 @@ sampleAlbums.push({
 
 
 $(document).ready(function() {
+
   console.log('app.js loaded!');
-  sampleAlbums.forEach(function(i){
-    renderAlbum(i);
-  });
+
+  getAlbums();
+  // renderAlbum(albums);
+
+  // sampleAlbums.forEach(function(i){
+  //   // renderAlbum(i);
+  // });
+
 });
 
 
@@ -96,3 +102,27 @@ function renderAlbum(album) {
   $("#albums").append(albumHtml);
 
 }
+
+// get the album data via server.js route
+function getAlbums(){
+  $.get('/api/albums',function(){})
+  .done(function(albums){
+    albums.forEach(function(album){
+      renderAlbum(album);
+    })
+  })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
