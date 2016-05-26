@@ -42,11 +42,6 @@ $(document).ready(function() {
   console.log('app.js loaded!');
 
   getAlbums();
-  // renderAlbum(albums);
-
-  // sampleAlbums.forEach(function(i){
-  //   // renderAlbum(i);
-  // });
 
 });
 
