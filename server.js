@@ -8,8 +8,6 @@ var app = express();
 // serve static files from public folder
 app.use(express.static(__dirname + '/public'));
 
-var db = require("./models");
-
 /************
  * DATABASE *
  ************/
